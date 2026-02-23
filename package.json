@@ -60,5 +60,10 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "overrides": {
+    "fast-xml-parser": ">=5.3.6",
+    "minimatch": ">=10.2.1",
+    "glob": ">=10.5.0"
   }
 }

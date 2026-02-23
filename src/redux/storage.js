@@ -1,6 +1,6 @@
-import {MMKV} from 'react-native-mmkv';
+import {createMMKV} from 'react-native-mmkv';
 
-const storage = new MMKV();
+const storage = createMMKV();
 
 const reduxStorage = {
   setItem: (key, value) => {
@@ -12,7 +12,7 @@ const reduxStorage = {
     return Promise.resolve(value);
   },
   removeItem: key => {
-    storage.delete(key);
+    storage.remove(key);
     return Promise.resolve();
   },
 };
