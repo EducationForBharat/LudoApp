@@ -21,6 +21,7 @@ import {navigate} from '../helpers/NavigationUtil';
 import {useDispatch, useSelector} from 'react-redux';
 import {selectCurrentPositions} from '../redux/reducers/gameSelectors';
 import {resetGame} from '../redux/reducers/gameSlice';
+import {BRANDING} from '../constants/Branding';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
@@ -159,7 +160,7 @@ const HomeScreen = () => {
         </Pressable>
       </Animated.View>
 
-      <Text style={styles.artist}>Made By - Ritik Prasad ™</Text>
+      <Text style={styles.artist}>Made By - {BRANDING.developerName}</Text>
     </Wrapper>
   );
 };
